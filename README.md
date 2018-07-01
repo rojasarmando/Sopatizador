@@ -16,4 +16,19 @@ Si usted es desarrollador, tenga la libertad de estudiar, modificar y compartir 
 *	Se pueden elimar las palabras de la lista
 *	Impresión de la sopa de letras  
 
+### Demo 
+
+https://mrrojas.github.io/Sopatizador/index.html
+
+### ScreenShots de la App
+
+![enter image description here](https://raw.githubusercontent.com/MrRojas/Sopatizador/master/img/Captura%20de%20pantalla%20%28385%29.png)
+
+![enter image description here](https://raw.githubusercontent.com/MrRojas/Sopatizador/master/img/paso1.png)
+
+![enter image description here](https://raw.githubusercontent.com/MrRojas/Sopatizador/master/img/paso3.png)
+
+![enter image description here](https://raw.githubusercontent.com/MrRojas/Sopatizador/master/img/paso4.png)
+
+![enter image description here](https://raw.githubusercontent.com/MrRojas/Sopatizador/master/img/paso5.png)
 
