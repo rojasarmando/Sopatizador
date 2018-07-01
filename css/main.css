@@ -1,0 +1,50 @@
+a{
+	color: black;
+}
+
+.sopa{
+
+  cursor: pointer;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  overflow: auto;
+  max-height: 90%;
+}
+
+#logo{
+
+  height: 2em;
+}
+
+#licencia{
+
+  margin: auto;
+}
+
+
+
+
+@media print{
+	
+body{
+	visibility: hidden;
+
+}
+
+#imprimir{
+	visibility: visible ;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+}
+}
