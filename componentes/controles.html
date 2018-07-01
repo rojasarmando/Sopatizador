@@ -1,0 +1,100 @@
+           <div class="col-md-5 col-md-offset-1">
+                
+        
+                <div class="panel panel-danger">
+                    
+                    <div class="panel-heading ">
+                        <div class="panel-title">
+                            <h3 class="text-center"> 
+                            {{ v.titulo }} 
+                            <i class="glyphicon glyphicon-user"></i>
+    
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <form class="form-horizontal">
+                            
+
+                            <div class="col-md-8 col-md-offset-2">
+
+                                 <!-- Agregar Palabra  -->
+                                <br>
+                                <label >Palabra a Registrar </label>
+                                <br>
+
+                                <input ng-model="v.nuevaPalabra" type="text" class="form-control" placeholder="Ingresa una palabra aqui">
+
+                                <button ng-disabled="!v.control2"  ng-click="v.addPalabra()"   class="btn btn-danger btn-block" > {{v.mensajeError1}} <i class="glyphicon glyphicon-download"></i> </button>
+
+
+
+                                 <br>
+                                   <div  class="col-md-8" >
+                                <label >Numero de Columnas  </label>
+                                  </div>
+                                   <div  class="col-md-4" >
+                                <input   ng-model="v.columnas" type="number" class="form-control" placeholder="4">
+                                </div>
+                                <br>
+
+                                 <br>
+                                    <div  class="col-md-8" >
+                                <label >Numero de Filas  </label>
+                                  </div>
+                                   <div  class="col-md-4" >
+                                <input  ng-model="v.filas" type="number" class="form-control" placeholder="4">
+                                </div>
+                             
+        
+                                <br>
+                                <br>
+                             
+                                
+                                <!-- ---------------------------------- -->
+                                <br>
+                                 <div  class="col-md-6" >
+
+                                 <button ng-disabled="!v.control"   class="btn btn-success btn-block" ng-click="v.btnGenerar()"  > 
+                                    Generar <i class="glyphicon glyphicon-check" ></i> 
+                                </button>
+                                  </div>
+                                <div  class="col-md-6" >
+
+                                 <button  ng-click="v.btnImprimir()"  ng-disabled="!v.control"  class="btn btn-primary btn-block"      > 
+                                    Imprimir <i class="glyphicon glyphicon-print" ></i> 
+                                </button>
+                                  </div>
+
+                                  <br> 
+
+                                <br>
+
+                                 <button ng-disabled="!v.control"  class="btn btn-info btn-block" ng-click="v.btnResaltar()"     > 
+                                   {{v.mensajeError2}}
+
+                                    <i class="glyphicon glyphicon-fire" ></i> 
+                                </button>
+                                  
+
+
+                            </div>
+
+                            <br>
+
+
+                        </form>
+                        
+                    </div>
+
+                    <div class="panel-footer text-center">
+
+                        {{v.footer}}
+                    </div>
+
+
+                </div>
+
+            </div> 
