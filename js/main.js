@@ -5,7 +5,7 @@ function principal_f( $scope ){
 	v = this
 
 	v.titulo = "Panel de Control"
-	v.titulo2 = "Listas de Palabras Adicionadas"
+	v.titulo2 = "Listas de Palabras en la Sopa de Letras"
 	v.t  = 'Sopa de Letras'
 	v.footer = ' Armando Rojas - 2018'
 
@@ -47,7 +47,7 @@ $scope.$watchGroup(['v.nuevaPalabra' , 'v.columnas' , 'v.filas'  ], (nuevo , ant
 	}
 
 
-	if(nuevo[1] < 12  && nuevo[2] < 12 ){
+	if(nuevo[1] < 12  || nuevo[2] < 12 ){
 
 		v.control = false 
 		v.mensajeError2 = "Minimo 12 x 12"
