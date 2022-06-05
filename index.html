@@ -1,63 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content=" initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content=" initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Sopatizador</title>
 
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="fuentes/stylesheet.css">
-    <link rel="stylesheet" href="fuentes/iconos.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="fuentes/stylesheet.css" />
+    <link rel="stylesheet" href="fuentes/iconos.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-    <link rel="shortcut icon" href="img/icono.ico">
+    <link rel="shortcut icon" href="img/icono.ico" />
 
     <script src="js/angular.js"></script>
-  
+  </head>
+  <body ng-app="sopatizador">
+    <ng-include src=" 'componentes/nav.html' "> </ng-include>
 
+    <br />
 
-</head>
-<body ng-app="sopatizador" >
+    <div class="container-fluid" ng-controller="principal as v">
+      <div class="row">
+        <!-- Panel de control  -->
+        <ng-include src="  'componentes/controles.html' "></ng-include>
+        <!-- fin del panel de control -->
 
+        <!--  Lista de Palabhras -->
 
-<ng-include src=" 'componentes/nav.html' " > </ng-include>
+        <ng-include src="  'componentes/lista.html' "></ng-include>
 
-<br>
+        <!--  Fin de lista de palabras -->
+      </div>
 
-<div class="container-fluid" ng-controller="principal as v">
-    <div class="row">
+      <!-- Tabla  -->
+      <ng-include src="  'componentes/tabla.html' "></ng-include>
 
-     <!-- Panel de control  -->
-     <ng-include src="  'componentes/controles.html' " ></ng-include>
-     <!-- fin del panel de control -->
-
-    <!--  Lista de Palabhras -->
-
-     <ng-include src="  'componentes/lista.html' " ></ng-include>
-
-    <!--  Fin de lista de palabras -->
-
+      <!-- fin de la tabla -->
     </div>
 
-    <!-- Tabla  -->
-     <ng-include src="  'componentes/tabla.html' " ></ng-include>
-    
-    
-
-    <!-- fin de la tabla -->
-</div>
-
-<ng-include src=" 'componentes/logo.html' " > </ng-include>
+    <ng-include src=" 'componentes/logo.html' "> </ng-include>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/sweetalert2.js" ></script>
-    <script src="js/kajataca.jquery.js" > </script>
-    <script src="js/sopatizador.js" ></script>
-    <script src="js/validar.js" ></script>
+    <script src="js/sweetalert2.js"></script>
+    <script src="js/kajataca.jquery.js"></script>
+    <script src="js/sopatizador.js"></script>
+    <script src="js/validar.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
