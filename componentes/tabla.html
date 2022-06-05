@@ -1,40 +1,31 @@
- <div class="row" id=imprimir >
-  
+<div class="row" id="imprimir">
   <div class="col-md-10 col-md-offset-1">
-      
-  <br>
-  <h3 class="text-center well">  {{ v.t }}  </h3>
+    <br />
+    <h3 class="text-center well">{{ v.t }}</h3>
 
-  <table class="table table-hover">
-       <tbody  >
+    <table class="table table-hover">
+      <tbody>
+        <tr ng-repeat="ts in v.tabla">
+          <th
+            ng-repeat="tss in v.tabla[$index]"
+            ng-style="{background: (ts[$index].decorar) ? v.resaltar : ''  }"
+          >
+            <a> {{ ts[$index].texto }} </a>
+          </th>
+        </tr>
+      </tbody>
 
-
-          <tr  ng-repeat="ts in v.tabla"  >
-             
-          <th ng-repeat="tss in v.tabla[$index]" ng-style="{background: (ts[$index].decorar) ? v.resaltar : ''  }"  >        
-
-                <a  > 
-                  {{ ts[$index].texto }}
-                </a>
-             
-              </th>
-           </tr>
-          
-       </tbody>
-
-       <caption> {{ v.footer}} </caption>
-  </table>
+      <caption>
+        {{ v.footer}}
+      </caption>
+    </table>
 
     <div class="col-md-3 col-md-offset-1">
-        <ol class="list-group">
-        <li ng-repeat=" list in v.lista "  class="list-group-item-text"  >
+      <ol class="list-group">
+        <li ng-repeat=" list in v.lista " class="list-group-item-text">
           {{list }}
-          
         </li>
       </ol>
     </div>
-
-
   </div>
-
 </div>
