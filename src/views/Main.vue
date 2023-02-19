@@ -1,8 +1,8 @@
 <script setup lang="ts">
 //import { RouterLink, RouterView } from "vue-router";
 
-import Step1 from "../components/Step1.vue";
-import Step2 from "../components/Step2.vue";
+import Step1 from "../components/Step1Component.vue";
+import Step2 from "../components/Step2Component.vue";
 </script>
 
 <template>

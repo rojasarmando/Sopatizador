@@ -86,30 +86,21 @@ export default {
   },
   data() {
     return {
-      count: 0,
       dataForm: {
         row: 12,
         col: 12,
-        words: [],
+        words: new Array(),
       },
       newWord: "",
     };
   },
   methods: {
-    increment() {
-      this.count++;
-    },
-
     addWord() {
       if (this.newWord) {
         this.dataForm.words.push(this.newWord);
         this.newWord = "";
       }
     },
-  },
-  mounted() {
-    // methods can be called in lifecycle hooks, or other methods!
-    this.increment();
   },
 };
 </script>
