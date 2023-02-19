@@ -1,7 +1,10 @@
 <script setup lang="ts">
 //import { RouterLink, RouterView } from "vue-router";
-import Navbar from "./components/Navbar.vue";
-import Footer from "./components/Footer.vue";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+import "./assets/base.css";
+import Navbar from "./components/NavbarComponent.vue";
+import Footer from "./components/FooterComponent.vue";
 import Main from "./views/Main.vue";
 </script>
 
