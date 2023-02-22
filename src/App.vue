@@ -3,9 +3,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "./assets/base.css";
+
 import Navbar from "./components/NavbarComponent.vue";
 import Footer from "./components/FooterComponent.vue";
-import Main from "./views/Main.vue";
+import Main from "./views/MainView.vue";
 </script>
 
 <template>
