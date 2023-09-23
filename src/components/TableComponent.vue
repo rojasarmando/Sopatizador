@@ -9,14 +9,22 @@ import { Sopatizador } from "sopatizador";
           <h4 class="card-header">Paso 2: Resultados</h4>
           <div class="card-body">
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-              <button class="btn btn-outline-danger me-md-2" type="button">
+              <button
+                v-on:click="backForm()"
+                class="btn btn-outline-danger me-md-2"
+                type="button"
+              >
                 <i class="bi bi-arrow-left"></i> Atras
               </button>
               <button class="btn btn-outline-success" type="button">
                 Imprimir
                 <i class="bi bi-printer"></i>
               </button>
-              <button class="btn btn-outline-primary" type="button">
+              <button
+                v-on:click="btnMarks()"
+                class="btn btn-outline-primary"
+                type="button"
+              >
                 Marcar Repuestas
                 <i class="bi bi-check2-all"></i>
               </button>
@@ -25,7 +33,13 @@ import { Sopatizador } from "sopatizador";
             <table class="table table-hover">
               <tbody>
                 <tr v-for="r in row" :key="r">
-                  <td v-for="c in col" :key="c">
+                  <td
+                    v-for="c in col"
+                    :key="c"
+                    :class="{
+                      mark: soup.getAlphabet_soup()[r - 1][c - 1].decorator,
+                    }"
+                  >
                     {{ soup.getAlphabet_soup()[r - 1][c - 1].text }}
                   </td>
                 </tr>
@@ -52,6 +66,7 @@ export default {
       row: 0,
       col: 0,
       soup: new Sopatizador(),
+      marks: false,
     };
   },
   methods: {
@@ -60,12 +75,26 @@ export default {
       this.soup = new Sopatizador(row, col);
       this.row = row;
       this.col = col;
+      this.marks = false;
       list?.forEach((e) => {
         this.words.push(e);
 
         this.soup.addAlphabet_soup(e.toString());
       });
     },
+
+    backForm() {
+      this.$emit("backForm");
+    },
+
+    btnMarks() {
+      this.marks = !this.marks;
+    },
   },
 };
 </script>
+<style>
+.mark {
+  background: yellow;
+}
+</style>

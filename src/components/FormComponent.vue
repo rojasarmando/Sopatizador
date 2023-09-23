@@ -84,7 +84,11 @@ import { isLetter, isNumber } from "../utils/InputUtils";
             </ol>
 
             <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-              <button class="btn btn-outline-danger me-md-2" type="button">
+              <button
+                v-on:click="clear()"
+                class="btn btn-outline-danger me-md-2"
+                type="button"
+              >
                 Limpiar <i class="bi bi-eraser-fill"></i>
               </button>
               <button
@@ -122,6 +126,15 @@ export default {
       if (!this.newWord) return;
       if (this.newWord.length < 4) return;
       this.dataForm.words.push(this.newWord.toUpperCase());
+      this.newWord = "";
+    },
+
+    clear() {
+      this.dataForm = {
+        row: 12,
+        col: 12,
+        words: [],
+      };
       this.newWord = "";
     },
 

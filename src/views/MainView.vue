@@ -8,7 +8,7 @@ import Table from "../components/TableComponent.vue";
 
 <template>
   <Form :show="control" @change-control="changeControl" />
-  <Table ref="tableRef" :show="!control" :list="words" />
+  <Table ref="tableRef" :show="!control" :list="words" @back-form="backForm" />
 </template>
 
 <script lang="ts">
@@ -27,6 +27,10 @@ export default {
       let refs: any = this.$refs.tableRef;
       console.log(this.$refs.tableRef);
       refs.updateWords(this.words, list.row, list.col);
+    },
+
+    backForm() {
+      this.reset();
     },
 
     reset() {
